@@ -1,0 +1,20 @@
+CREATE TABLE cars (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    brand VARCHAR(50) NOT NULL,
+    model VARCHAR(50) NOT NULL,
+    version VARCHAR(50),
+    year YEAR NOT NULL,
+    mileage INT NOT NULL,
+    fuel_type VARCHAR(30) NOT NULL,
+    transmission VARCHAR(30) NOT NULL,
+    engine_capacity DECIMAL(4,1),
+    power_hp INT,
+    color VARCHAR(30),
+    doors TINYINT,
+    price DECIMAL(10,2) NOT NULL,
+    plate VARCHAR(10) UNIQUE,
+    description TEXT,
+    is_available BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
